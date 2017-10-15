@@ -21,7 +21,9 @@ exports.paths = {
   dist: 'dist',
   tmp: '.tmp',
   e2e: 'e2e',
-  tasks: 'gulp_tasks'
+  tasks: 'gulp_tasks',
+  webapp: 'src/main/webapp/*',
+  bower: 'bower_components'
 };
 
 /**
@@ -58,6 +60,5 @@ exports.errorHandler = function (title) {
  *  to inject css preprocessor deps and js files in karma
  */
 exports.wiredep = {
-  exclude: [/\/bootstrap\.js$/],
   directory: 'bower_components'
 };

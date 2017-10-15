@@ -10,8 +10,8 @@
       "resolved": "/home/focusnetworks/.nvm/versions/node/v8.6.0/lib/node_modules/generator-fountain-webapp/node_modules/generator-fountain-angular1/generators/app/index.js",
       "namespace": "fountain-angular1:app",
       "_": [],
-      "sample": "todoMVC",
-      "router": "uirouter"
+      "sample": "hello",
+      "router": "none"
     }
   }
 }

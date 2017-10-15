@@ -3,15 +3,21 @@
   "version": "0.0.1",
   "dependencies": {
     "angular": "^1.6.2",
-    "angular-ui-router": "1.0.0-beta.3",
-    "todomvc-app-css": "^2.0.6"
+    "moment": "^2.19.1",
+    "bootstrap":"*",
+    "angular-bootstrap":"*",
+    "angular-ui-router":"#1.0.8"
   },
   "devDependencies": {
     "angular-mocks": "^1.6.2"
   },
   "overrides": {
-    "todomvc-app-css": {
-      "main": "index.css"
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
     }
   }
+
 }

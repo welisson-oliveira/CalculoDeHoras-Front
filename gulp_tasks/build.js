@@ -21,12 +21,16 @@ function build() {
   const partialsInjectOptions = {
     starttag: '<!-- inject:partials -->',
     ignorePath: conf.paths.tmp,
-    addRootSlash: false
+    addRootSlash: true
   };
 
   const htmlFilter = filter(conf.path.tmp('*.html'), {restore: true});
   const jsFilter = filter(conf.path.tmp('**/*.js'), {restore: true});
   const cssFilter = filter(conf.path.tmp('**/*.css'), {restore: true});
+
+  gulp.src(conf.path.bower('**/*.{eot,svg,ttf,woff,woff2}'))
+  .pipe(rename({dirname: ''}))
+  .pipe(gulp.dest(`${conf.paths.dist}/fonts`));
 
   return gulp.src(conf.path.tmp('/index.html'))
     .pipe(inject(partialsInjectFile, partialsInjectOptions))
