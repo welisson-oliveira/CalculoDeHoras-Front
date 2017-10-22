@@ -1,5 +1,10 @@
+angular.module('constants', []);
 angular
   .module('app', [
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'restangular',
+    'constants',
+    'ngCookies',
+    'ngFlash'
   ]);
