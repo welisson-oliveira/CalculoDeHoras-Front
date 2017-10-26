@@ -1,3 +1,38 @@
-<h1>Teste 3</h1>
+<div class="event-form col-md-*">
+    <form id="exitTimeForm" name="vm.exitTimeForm" class="form-horizontal" ng-submit="vm.getExitTime()" novalidate>
+        <div class="form-group row form-head text-center">
+            <h1>Exit Time: {{vm.response.exitTime}}</h1>
+        </div>
+        <div class="form-group row">
+            <label class="control-label col-sm-4" for="hour">Enter entry time:</label>
+            <div class="col-sm-6 form-inline">
+                <input focus="vm.focus" type="number" class="form-control" id="hourEntryTime" placeholder="hour" ng-model="vm.exitTime.entryTime.hour" required>
+                <label> : </label>
+                <input type="number" class="form-control" id="minutesEntryTime" placeholder="minutes" ng-model="vm.exitTime.entryTime.minutes" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="control-label col-sm-4" for="hour">Enter lunch time init:</label>
+            <div class="col-sm-6 form-inline">
+                <input type="number" class="form-control" id="hourLunchTimeInit" placeholder="hour" ng-model="vm.exitTime.lunchTimeInit.hour" required>
+                <label> : </label>
+                <input type="number" class="form-control" id="minutesLunchTimeInit" placeholder="minutes" ng-model="vm.exitTime.lunchTimeInit.minutes" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="control-label col-sm-4" for="hour">Enter lunch time end:</label>
+            <div class="col-sm-6 form-inline">
+                <input type="number" class="form-control" id="hourLunchTimeEnd" placeholder="hour" ng-model="vm.exitTime.lunchTimeEnd.hour" required>
+                <label> : </label>
+                <input type="number" class="form-control" id="minutesLunchTimeEnd" placeholder="minutes" ng-model="vm.exitTime.lunchTimeEnd.minutes" required>
+            </div>
+        </div>
 
-<button type="button" class="btn btn-primary" ng-click="vm.teste()">TESTE</button> 
+        <div class="form-group row">
+            <div class="col-sm-offset-4 col-sm-6">
+                <button type="submit" class="btn btn-primary">Calculate</button>
+                <a href="/" type="button" class="btn btn-default">Return</a>
+            </div>
+        </div>
+    </form>
+</div>

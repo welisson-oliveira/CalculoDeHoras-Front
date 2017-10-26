@@ -6,5 +6,6 @@ angular
     'restangular',
     'constants',
     'ngCookies',
-    'ngFlash'
+    'ngFlash',
+    'directives'
   ]);

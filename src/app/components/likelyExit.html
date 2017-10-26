@@ -1,1 +1,22 @@
-<h1>Teste 2</h1>
+<div class="event-form col-md-*">
+        <form id="likelyExitForm" name="vm.likelyExitForm" class="form-horizontal" ng-submit="vm.getLikelyExit()" novalidate>
+            <div class="form-group row form-head text-center">
+                <h1>Likely Exit Time: {{vm.response.likelyExit}}</h1>
+            </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-4" for="hour">Enter entry time:</label>
+                <div class="col-sm-6 form-inline">
+                    <input focus="vm.focus" type="number" class="form-control" id="hour" placeholder="hour" ng-model="vm.likelyExit.hour" required>
+                    <label> : </label> 
+                    <input type="number" class="form-control" id="minutes" placeholder="minutes" ng-model="vm.likelyExit.minutes" required>
+                </div>
+            </div>
+    
+            <div class="form-group row">
+                <div class="col-sm-offset-4 col-sm-6">
+                    <button type="submit" class="btn btn-primary" >Calculate</button>
+                    <a href="/" type="button" class="btn btn-default" >Return</a>
+                </div>
+            </div>
+        </form>
+    </div>

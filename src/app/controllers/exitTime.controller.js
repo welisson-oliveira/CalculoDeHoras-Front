@@ -4,9 +4,37 @@ angular.module('app')
 ExitTimeController.$inject = ['ExitTimeService'];
 
 /* @ngInject */
-function ExitTimeController(ExitTimeService) {
+function ExitTimeController(ExitTimeService, directives) {
     const vm = this;
-    vm.teste = function(){
-        ExitTimeService.getExitTime("{ \"hour\" :9, \"minutes\" :30 }");
+    vm.exitTime = {
+        entryTime : {
+            hour: '',
+            minutes: ''
+        },
+        lunchTimeInit : {
+            hour: '',
+            minutes: ''
+        },
+        lunchTimeEnd : {
+            hour: '',
+            minutes: ''
+        }
+    };
+   
+    vm.focus = true;
+    vm.response = {};
+    vm.getExitTime = function(){
+        if(vm.exitTimeForm.$valid){
+            return ExitTimeService.getExitTime(vm.exitTime).then(function(exitTime){
+                console.log(exitTime);
+                vm.response.exitTime = exitTime.hour+":"+exitTime.minutes;
+                vm.exitTime = {};
+                return vm.response.exitTime;
+            }, function(error){
+                console.log(error.errorCode);
+                vm.response.error = error;
+                return vm.response.error;
+            });
+        }
     }
 }
