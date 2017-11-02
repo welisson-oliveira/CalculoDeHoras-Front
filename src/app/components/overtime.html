@@ -1,0 +1,46 @@
+<div class="event-form col-md-*">
+  <form id="overtimeForm" name="vm.overtimeForm" class="form-horizontal" ng-submit="vm.getOvertime()" novalidate>
+      <div class="form-group row form-head text-center">
+          <h1>Overtime: {{vm.response.overtime}}</h1>
+      </div>
+      <div class="form-group row">
+          <label class="control-label col-sm-4" for="hour">Enter entry time:</label>
+          <div class="col-sm-6 form-inline">
+              <input focus="vm.focus" type="number" class="form-control" id="hourEntryTime" placeholder="hour" ng-model="vm.overtime.entryTime.hour" required>
+              <label> : </label>
+              <input type="number" class="form-control" id="minutesEntryTime" placeholder="minutes" ng-model="vm.overtime.entryTime.minutes" required>
+          </div>
+      </div>
+      <div class="form-group row">
+          <label class="control-label col-sm-4" for="hour">Enter lunch time init:</label>
+          <div class="col-sm-6 form-inline">
+              <input type="number" class="form-control" id="hourLunchTimeInit" placeholder="hour" ng-model="vm.overtime.lunchTimeInit.hour" required>
+              <label> : </label>
+              <input type="number" class="form-control" id="minutesLunchTimeInit" placeholder="minutes" ng-model="vm.overtime.lunchTimeInit.minutes" required>
+          </div>
+      </div>
+      <div class="form-group row">
+          <label class="control-label col-sm-4" for="hour">Enter lunch time end:</label>
+          <div class="col-sm-6 form-inline">
+              <input type="number" class="form-control" id="hourLunchTimeEnd" placeholder="hour" ng-model="vm.overtime.lunchTimeEnd.hour" required>
+              <label> : </label>
+              <input type="number" class="form-control" id="minutesLunchTimeEnd" placeholder="minutes" ng-model="vm.overtime.lunchTimeEnd.minutes" required>
+          </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-4" for="hour">Enter exit time:</label>
+        <div class="col-sm-6 form-inline">
+            <input type="number" class="form-control" id="hourExitTime" placeholder="hour" ng-model="vm.overtime.exitTime.hour" required>
+            <label> : </label>
+            <input type="number" class="form-control" id="minutesExitTime" placeholder="minutes" ng-model="vm.overtime.exitTime.minutes" required>
+        </div>
+    </div>
+
+      <div class="form-group row">
+          <div class="col-sm-offset-4 col-sm-6">
+              <button type="submit" class="btn btn-primary">Calculate</button>
+              <a href="/" type="button" class="btn btn-default">Return</a>
+          </div>
+      </div>
+  </form>
+</div>

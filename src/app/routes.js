@@ -29,5 +29,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $httpProvider, $locati
             templateUrl: 'app/components/missingTime.html',
             controller: 'MissingTimeController',
             controllerAs: 'vm'
+        }).state('overtime', {
+            url: '/overtime',
+            templateUrl: 'app/components/overtime.html',
+            controller: 'OvertimeController',
+            controllerAs: 'vm'
         });
 }
