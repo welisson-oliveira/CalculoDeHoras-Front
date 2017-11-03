@@ -64,7 +64,7 @@
     "test": "gulp test",
     "test:auto": "gulp test:auto",
     "bower": "bower",
-    "start": "gulp serve --env=prod"
+    "start": "node server.js"
   },
   "eslintConfig": {
     "globals": {
