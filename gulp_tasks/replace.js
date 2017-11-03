@@ -16,13 +16,7 @@ const endpoints = {
   prod: 'https://calculo-de-horas-server.herokuapp.com/'
 }
 
-//TODO: change here to put urls of authorizer micro service
-function replacePath() {
-  return gulp.src(conf.path.src('index.html'))
-            .pipe(gulpif(isDefault, replace(replaceableString.path, pathToReplace)))
-            .pipe(gulpif(isProd, replace(replaceableString.path, pathToReplace)))
-            .pipe(gulp.dest(conf.paths.dist));
-}
+
 
 function replaceUrl() {
   return gulp.src(conf.path.src('/*/constants/constants.js'))
@@ -31,5 +25,4 @@ function replaceUrl() {
             .pipe(gulp.dest(conf.paths.tmp));
 }
 
-gulp.task('replacePath', replacePath);
 gulp.task('replaceUrl', replaceUrl)
