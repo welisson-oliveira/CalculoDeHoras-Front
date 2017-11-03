@@ -9,7 +9,7 @@ const conf = require('../conf/gulp.conf');
 gulp.task('inject', inject);
 
 function inject() {
-  const injectStyles = gulp.src(conf.path.src('**/*.css'), {read: false});
+  // const injectStyles = gulp.src(conf.path.src('**/*.css'), {read: false});
   const injectScripts = gulp.src([
     conf.path.tmp('**/*.js'),
     `!${conf.path.tmp('**/*.spec.js')}`
@@ -22,7 +22,7 @@ function inject() {
   };
 
   return gulp.src(conf.path.src('index.html'))
-    .pipe(gulpInject(injectStyles, injectOptions))
+    // .pipe(gulpInject(injectStyles, injectOptions))
     .pipe(gulpInject(injectScripts, injectOptions))
     .pipe(wiredep(Object.assign({}, conf.wiredep)))
     .pipe(gulp.dest(conf.paths.tmp))

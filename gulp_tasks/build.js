@@ -37,6 +37,7 @@ function build() {
     .pipe(inject(partialsInjectFile, partialsInjectOptions))
     .pipe(useref({}, lazypipe().pipe(sourcemaps.init, {loadMaps: true})))
     .pipe(jsFilter)
+    .pipe(ngAnnotate())
     .pipe(uglify()).on('error', conf.errorHandler('Uglify'))
     .pipe(rev())
     .pipe(jsFilter.restore)
