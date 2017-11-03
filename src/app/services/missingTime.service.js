@@ -1,5 +1,7 @@
 angular.module('app').service('MissingTimeService', MissingTimeService);
 
+MissingTimeService.$inject = ['restFactory'];
+
 /* @ngInject */
 function MissingTimeService(restFactory) {
     const vm = this;

@@ -1,5 +1,7 @@
 angular.module('app').service('OvertimeService', OvertimeService);
 
+OvertimeService.$inject = ['restFactory'];
+
 /* @ngInject */
 function OvertimeService(restFactory) {
 

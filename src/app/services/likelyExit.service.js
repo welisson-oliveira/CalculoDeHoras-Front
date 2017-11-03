@@ -1,5 +1,7 @@
 angular.module('app').service('LikelyExitService', LikelyExitService);
 
+LikelyExitService.$inject = ['restFactory'];
+
 /* @ngInject */
 function LikelyExitService(restFactory) {
     const vm = this;

@@ -1,7 +1,7 @@
 angular.module('app')
 .controller('OvertimeController', OvertimeController);
 
-OvertimeController.$inject = ['OvertimeService'];
+OvertimeController.$inject = ['OvertimeService', 'directives'];
 
 /* @ngInject */
 function OvertimeController(OvertimeService, directives) {

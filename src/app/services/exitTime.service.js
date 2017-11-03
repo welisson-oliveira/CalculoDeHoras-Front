@@ -1,5 +1,7 @@
 angular.module('app').service('ExitTimeService', ExitTimeService);
 
+ExitTimeService.$inject = ['restFactory'];
+
 /* @ngInject */
 function ExitTimeService(restFactory) {
 
