@@ -1,7 +1,7 @@
 angular.module('app')
 .controller('ExitTimeController', ExitTimeController);
 
-ExitTimeController.$inject = ['ExitTimeService', 'directives'];
+ExitTimeController.$inject = ['ExitTimeService'];
 
 /* @ngInject */
 function ExitTimeController(ExitTimeService, directives) {

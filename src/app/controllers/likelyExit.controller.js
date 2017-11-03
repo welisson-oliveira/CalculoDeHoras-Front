@@ -1,7 +1,7 @@
 angular.module('app')
     .controller('LikelyExitController', LikelyExitController);
 
-LikelyExitController.$inject = ['LikelyExitService', 'directives'];
+LikelyExitController.$inject = ['LikelyExitService'];
 
 /* @ngInject */
 function LikelyExitController(LikelyExitService, directives) {

@@ -1,7 +1,7 @@
 angular.module('app')
     .controller('MissingTimeController', MissingTimeController);
 
-MissingTimeController.$inject = ['MissingTimeService', 'directives'];
+MissingTimeController.$inject = ['MissingTimeService'];
 
 /* @ngInject */
 function MissingTimeController(MissingTimeService, directives) {
