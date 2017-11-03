@@ -1,2 +1,2 @@
-process: npm install && npm install && bower install --force-latest && node node_modules/gulp/bin/gulp build
+process: npm install && npm install && bower install --force-latest
 web: npm start
