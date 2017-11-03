@@ -1,5 +1,5 @@
 angular.module('constants').constant("configs", {
-    "rootURL": "http://localhost:8081/"
+    "rootURL": "@@SERVER_URL@@"
 });
 
 angular.module('constants').constant('AUTH_EVENTS', {

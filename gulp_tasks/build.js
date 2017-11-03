@@ -10,6 +10,7 @@ const htmlmin = require('gulp-htmlmin');
 const sourcemaps = require('gulp-sourcemaps');
 const uglifySaveLicense = require('uglify-save-license');
 const inject = require('gulp-inject');
+const rename = require('gulp-rename');
 const ngAnnotate = require('gulp-ng-annotate');
 
 const conf = require('../conf/gulp.conf');
@@ -36,8 +37,7 @@ function build() {
     .pipe(inject(partialsInjectFile, partialsInjectOptions))
     .pipe(useref({}, lazypipe().pipe(sourcemaps.init, {loadMaps: true})))
     .pipe(jsFilter)
-    .pipe(ngAnnotate())
-    .pipe(uglify({preserveComments: uglifySaveLicense})).on('error', conf.errorHandler('Uglify'))
+    .pipe(uglify()).on('error', conf.errorHandler('Uglify'))
     .pipe(rev())
     .pipe(jsFilter.restore)
     .pipe(cssFilter)
